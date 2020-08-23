@@ -1,0 +1,39 @@
+{
+  "name": "stuff",
+  "version": "0.0.1",
+  "description": "",
+  "main": "build/server.js",
+  "scripts": {
+    "test": "npx jest --detectOpenHandles",
+    "start": "tsc --build tsconfig.json -w & nodemon build/server.js",
+    "clean": "rm -rf build"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/koa": "^2.11.0",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa-router": "^7.0.42",
+    "@types/supertest": "^2.0.10",
+    "bcryptjs": "^2.4.3",
+    "fp-ts": "^2.8.1",
+    "io-ts": "^2.2.10",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.8.3",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.10",
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2",
+    "ts-jest": "^26.2.0",
+    "tsc-watch": "^4.2.9",
+    "typescript-tools": "^0.3.1"
+  }
+}
