@@ -16,3 +16,10 @@ export const LoginDTO = t.type({
   username: t.string,
   password: t.string,
 });
+
+
+export const JWTDTO = t.type({
+  username: t.string,
+  iat: t.number,
+  exp: t.number
+});

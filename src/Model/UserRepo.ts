@@ -1,6 +1,5 @@
 import { Repo } from "./Repo";
 import { User } from "./Entities";
-import { Array } from "io-ts";
 
 class MemoryRepo implements Repo<string, User> {
   private readonly x: Array<User> = [];
