@@ -19,7 +19,19 @@ export const LoginDTO = t.type({
 
 
 export const JWTDTO = t.type({
-  username: t.string,
+  sub: t.string,
   iat: t.number,
   exp: t.number
 });
+
+
+export const ArticleV = t.type({
+  title: t.string,
+  description: t.string,
+  body: t.string,
+  tagList: t.array(t.string),
+  createdAt: t.number,
+});
+
+
+export const ArticleDTO = ArticleV._A;

@@ -1,9 +1,14 @@
 import { Repo } from "./Model/Repo";
-import { User } from "./Model/Entities";
-import { BaseContext } from "koa";
+import { User, Article } from "./Model/Entities";
+import { BaseContext, DefaultState } from "koa";
 
 declare module "koa" {
   export class BaseContext {
-    repo: Repo<string, User>;
+    userRepo: Promise<Repo<string, User>>;
+    articleRepo: Promise<Repo<string, Article>>;
+  }
+
+  export class DefaultState {
+    username: string
   }
 }
